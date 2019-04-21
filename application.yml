@@ -1,11 +1,12 @@
-server: 
-  port: 4001 
-   
 spring: 
-  application: 
-    name: microservice-config-test
-  cloud: 
-    config: 
-      server: 
-        git: 
-          uri: https://github.com/nobt854/testSpringCloudConfig
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+port: 111
+---
+spring:
+  profiles: test
+port: 222
